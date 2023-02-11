@@ -13,15 +13,15 @@ export default function FooterComponent() {
               href="https://flowbite.com"
               src="https://flowbite.com/docs/images/logo.svg"
               alt="Flowbite Logo"
-              name="Flowbite"
+              name="Swarajya"
             />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Flowbite</Footer.Link>
-                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+                <Footer.Link href="#">Swarajya</Footer.Link>
+                <Footer.Link href="#">Marathi Literature Association</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
