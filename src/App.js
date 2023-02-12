@@ -11,7 +11,6 @@ import Blog from "./components/Blog";
 import Gallery2 from "./components/Gallery";
 function App() {
   const [hover, setHover] = useState(true);
-  console.log(process.env.REACT_APP_PROJECT_ID);
   return (
     <div>
       {/* <NavbarComponent className="rounded-none  inset-x-0 bottom-0 mt-auto bg-gradient-to-r from-red-600 via-red-700 to-yellow-400" /> */}
