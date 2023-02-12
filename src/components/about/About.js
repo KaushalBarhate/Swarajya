@@ -6,8 +6,8 @@ function About() {
         <div className='circleBackground'>
             <div style={{
             width: '150%',
-            marginTop:"-13%",
-            height: '127%',
+            marginTop:"-13.5%",
+            height: '128%',
             marginLeft:'-29%',
             borderRadius: "50%",
             overflow: "hidden",
