@@ -1,0 +1,46 @@
+.title-screen {
+    margin-top: 19%;
+    margin-left: 27%;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 58px;
+display: flex;
+align-items: center;
+text-align: center;
+color: floralwhite;
+
+/* color: #000000; */
+}
+.paragraph {
+    margin-left:27%;
+    margin-top:7%;
+    margin-right:10%;
+    color: floralwhite;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 31px;
+}
+.About {
+    display:flex;
+    flex-direction:row;
+}
+.circleBackground {
+    width: 50%;
+}
+.ImgBack {
+    width: 50%;
+}
+.imgCont {
+width: 350px;
+height: 450px;
+margin-left: 35%;
+margin-top: 20%;
+margin-bottom:21.7%;
+}
+p {
+    margin-top:5%;
+}
