@@ -23,7 +23,6 @@ export default function Blog() {
           date
         }`
       );
-      console.log(blog[id]);
       setData(blog[id]);
     }
     fetchData();
@@ -41,11 +40,13 @@ export default function Blog() {
             </header>
             <p className="lead">{data.shortDescription}</p>
             <figure>
-              <img
-                className="my-8 mx-auto"
-                src={urlFor(data.images[0]).url()}
-                alt=""
-              ></img>
+              {data.images ? (
+                <img
+                  className="my-8 mx-auto"
+                  src={urlFor(data.images[0]).url()}
+                  alt=""
+                ></img>
+              ) : null}
             </figure>
             <p>{data.mainDescription}</p>
           </article>

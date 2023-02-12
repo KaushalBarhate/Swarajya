@@ -9,6 +9,7 @@ import Home from "./components/home/home";
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blog";
 import Gallery2 from "./components/Gallery";
+
 function App() {
   const [hover, setHover] = useState(true);
   return (
