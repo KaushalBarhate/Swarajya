@@ -1,19 +1,13 @@
-import NavbarComponent from "../Navbar";
-import React, { useState } from "react";
-import FooterComponent from "../Footer";
-import Content from "../content";
+import React from "react";
+import { Carousel } from "flowbite-react";
+import { useState, useEffect } from "react";
+import Slideshow from "./Carousel";
 function Home() {
   const [hover, setHover] = useState(true);
+
   return (
     <div>
-      <div
-      // className="App flex flex-col min-h-screen"
-      // style={{
-      //   background:
-      //     "linear-gradient(0deg, rgba(159,6,6,1) 0%, rgba(190,7,7,1) 4%, rgba(224,75,7,1) 24%, rgba(224,95,7,1) 58%, rgba(235,128,6,1) 78%, rgba(230,213,16,1) 100%)",
-      // }}
-      >
-        {/* <NavbarComponent text="Swarajya" marathi="स्वराज्य" /> */}
+      <div>
         <h1
           onMouseEnter={() => setHover(false)}
           onMouseLeave={() => setHover(true)}
@@ -21,8 +15,18 @@ function Home() {
         >
           {hover ? "Swarajya" : "स्वराज्य"}
         </h1>
-
-        <Content />
+        <img
+          style={{
+            boxShadow:
+              "4px 4px 25px 3px #F4EB0C, -4px -4px 25px 5px rgba(244, 235, 12, 0.53)",
+            borderRadius: "354px",
+            width: "506px",
+            height: "506px",
+          }}
+          src="./assets/home.jpg"
+          alt="Logo"
+          className="w-20 h-20 mx-auto my-12"
+        />
         <div>
           <div>
             <div
@@ -44,6 +48,8 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <Slideshow />
       </div>
     </div>
   );
