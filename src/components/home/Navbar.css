@@ -1,0 +1,14 @@
+@media screen and (max-width: 620px) {
+    .h2{
+      display: none;
+    }
+    .h1{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+  }
+  @media screen and (min-width: 620px) {
+    .h1{
+      display: none;
+    }
+  }

@@ -6,14 +6,18 @@ import NavbarComponent from "./components/Navbar";
 import FooterComponent from "./components/Footer";
 import Content from "./components/content";
 import Home from "./components/home/home";
+
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blog";
 import Gallery2 from "./components/Gallery";
+
+import About from "./components/about/About";
 
 function App() {
   const [hover, setHover] = useState(true);
   return (
     <div>
+
       {/* <NavbarComponent className="rounded-none  inset-x-0 bottom-0 mt-auto bg-gradient-to-r from-red-600 via-red-700 to-yellow-400" /> */}
       <BrowserRouter>
         <Routes>
@@ -21,7 +25,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route exact path="blogs" element={<Blogs />} />
           <Route exact path="gallery" element={<Gallery2 />} />
-
+ <Route exact path="about" element={<About />} />
           <Route exact path="blogs/:id" element={<Blog />} />
         </Routes>
       </BrowserRouter>
