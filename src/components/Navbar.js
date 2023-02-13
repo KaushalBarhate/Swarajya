@@ -7,65 +7,30 @@ export default function NavbarComponent(props) {
       fluid={true}
       rounded={true}
       style={{ backgroundColor: "transparent" }}
+      className="z-10"
     >
       <Navbar.Brand to="/">
-        <img
-          src={require("../logo.png")}
-          className="mr-2 h-14 sm:h-20"
-          alt="Swarajya Logo"
-          style={{ borderRadius: "60px" }}
-        />
+        <a href="/">
+          <img
+            src={require("../logo.png")}
+            className="mr-2 h-14 sm:h-20"
+            alt="Swarajya Logo"
+            style={{ borderRadius: "60px" }}
+          />
+        </a>
       </Navbar.Brand>
-      <div
-        onMouseEnter={() => setHover(false)}
-        onMouseLeave={() => setHover(true)}
-      >
-        {hover ? (
-          <span
-            className="self-center whitespace-nowrap text-xl font-semibold dark:text-white "
-            style={{
-              paddingLeft: "65%",
-              marginLeft: "13%",
-              width: "491px",
-              height: "62px",
-              fontWeight: "700",
-              fontSize: "40px",
-            }}
-          >
-            {props.text}
-          </span>
-        ) : (
-          <span
-            className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-            style={{
-              paddingLeft: "88%",
-              marginLeft: "13%",
-              height: "62px",
-              left: "504px",
-              top: "35px",
-              fontWeight: "700",
-              fontSize: "40px",
-              FontFace: "AMS Manthan",
-            }}
-          >
-            {props.marathi}
-          </span>
-        )}
-      </div>
 
       <Navbar.Toggle />
       <Navbar.Collapse className="min-w-1200">
         <Navbar.Link href="/home" active={false}>
           Home
         </Navbar.Link>
-        <Navbar.Link to="/aboutus">About</Navbar.Link>
+        <Navbar.Link href="/aboutus">About</Navbar.Link>
         <Navbar.Link href="/gallery">Gallery</Navbar.Link>
         <Navbar.Link href="/blogs" active={false}>
           Blogs
         </Navbar.Link>
-        <Navbar.Link href="/events">Event</Navbar.Link>
-
-        <Navbar.Link href="/contact">Contact</Navbar.Link>
+        <Navbar.Link href="/events">Upcoming Events</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 const UpcomingEvents = () => {
-  const [events, setEvents] = useState([]);
-
-  React.useEffect(() => {
-    if (data) {
-      setEvents(data);
-    }
-  }, [data]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  const [events, setEvents] = useState([
+    {
+      id: "1",
+      name: "Event 1",
+      description: "Event 1 Description",
+      date: "2021-01-01",
+      image:
+        "https://swarajya.vercel.app/static/media/34473504.37dda5ffc0ebaed1fe65.jpg",
+    },
+  ]);
 
   return (
     <div className="flex flex-col items-center">

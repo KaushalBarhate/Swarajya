@@ -11,6 +11,7 @@ function urlFor(source) {
 }
 export default function Blog() {
   let { id } = useParams();
+  const [hover, setHover] = React.useState(true);
   const [data, setData] = React.useState([]);
   React.useEffect(() => {
     async function fetchData() {
@@ -29,8 +30,15 @@ export default function Blog() {
   }, []);
   return (
     <div>
-      <NavbarComponent text="Blog" marathi="स्वराज्य" />
-      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 text-center">
+      {/* <NavbarComponent text="Blog" marathi="स्वराज्य" /> */}
+      <h1
+        onMouseEnter={() => setHover(false)}
+        onMouseLeave={() => setHover(true)}
+        className="-mt-20 text-3xl  font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
+      >
+        {hover ? "Blog" : "स्वराज्य"}
+      </h1>
+      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900 text-center">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
           <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
             <header className="mb-4 lg:mb-6 not-format">

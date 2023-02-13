@@ -11,11 +11,16 @@ export default function FooterComponent() {
   return (
     <Footer
       container={true}
-      className="rounded-none  inset-x-0 bottom-0 mt-auto"
+      className="rounded-none bg-transparent inset-x-0 bottom-0 mt-auto text-white"
     >
       <div className="w-full text-center ">
-        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Swarajya" year={2023} />
+        <div className="w-full justify-between sm:flex text-white sm:items-center sm:justify-between">
+          <Footer.Copyright
+            className="text-white"
+            href="/"
+            by="Swarajya"
+            year={2023}
+          />
           {/* <Footer.Brand
           href="https://flowbite.com"
           src="https://flowbite.com/docs/images/logo.svg"
@@ -24,10 +29,10 @@ export default function FooterComponent() {
         /> */}
           <Footer.LinkGroup>
             <Footer.Link href={""} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={20} />
+              <FaLinkedin className="text-white" size={20} />
             </Footer.Link>
             <Footer.Link href={""} target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={20} />
+              <FaInstagram className="text-white" size={20} />
             </Footer.Link>
           </Footer.LinkGroup>
         </div>

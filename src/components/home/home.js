@@ -7,13 +7,20 @@ function Home() {
   return (
     <div>
       <div
-        className="App flex flex-col min-h-screen"
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(159,6,6,1) 0%, rgba(190,7,7,1) 4%, rgba(224,75,7,1) 24%, rgba(224,95,7,1) 58%, rgba(235,128,6,1) 78%, rgba(230,213,16,1) 100%)",
-        }}
+      // className="App flex flex-col min-h-screen"
+      // style={{
+      //   background:
+      //     "linear-gradient(0deg, rgba(159,6,6,1) 0%, rgba(190,7,7,1) 4%, rgba(224,75,7,1) 24%, rgba(224,95,7,1) 58%, rgba(235,128,6,1) 78%, rgba(230,213,16,1) 100%)",
+      // }}
       >
-        <NavbarComponent text="Swarajya" marathi="स्वराज्य" />
+        {/* <NavbarComponent text="Swarajya" marathi="स्वराज्य" /> */}
+        <h1
+          onMouseEnter={() => setHover(false)}
+          onMouseLeave={() => setHover(true)}
+          className="-mt-20 text-3xl  font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
+        >
+          {hover ? "Swarajya" : "स्वराज्य"}
+        </h1>
 
         <Content />
         <div>
