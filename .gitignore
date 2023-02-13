@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-
+./swarajya-backend
+/swarajya-backend
 # testing
 /coverage
 
