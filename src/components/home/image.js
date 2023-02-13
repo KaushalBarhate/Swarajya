@@ -17,7 +17,6 @@ const divStyle = {
   width:'500px'
  
 }
-
 const slideImages = [
     {
         url: 'https://www.majhimarathi.com/wp-content/uploads/2020/02/Sant-Tukaram-Maharaj.jpg',
@@ -69,5 +68,4 @@ const Slideshow = () => {
       </div>
     )
 }
-
 export default Slideshow

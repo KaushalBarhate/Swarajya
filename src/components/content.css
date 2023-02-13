@@ -1,21 +1,6 @@
 .img {
-    background-image: url('../assets/shivajimaharaj.jpg');
+    background-image: url('34473504.jpg');
     /* background-repeat: no-repeat; */
     /* background-size: auto; */
-    
   background-size: 506px 506px;
-}
-@media screen and (max-width: 620px) {
-  .c2{
-    display: none;
-  }
-  .c1 {
-    padding-top:5%;
-    padding-bottom:10%;
-  }
-}
-@media screen and (min-width: 620px) {
-  .c1{
-    display: none;
-  }
 }
