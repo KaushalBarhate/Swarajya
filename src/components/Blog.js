@@ -34,7 +34,7 @@ export default function Blog() {
       <h1
         onMouseEnter={() => setHover(false)}
         onMouseLeave={() => setHover(true)}
-        className="-mt-20 text-3xl  font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
+        className="-mt-20 max-[1300px]:mt-0 text-3xl  font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl"
       >
         {hover ? "Blog" : "स्वराज्य"}
       </h1>
