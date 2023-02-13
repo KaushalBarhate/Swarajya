@@ -1,17 +1,52 @@
 import React,{ useState } from "react";
 import { Navbar } from "flowbite-react";
+import './home/Navbar.css'
 export default function NavbarComponent() {
   const [hover, setHover] = useState(true);
   return (
     <Navbar fluid={true} rounded={true} style={{backgroundColor: 'transparent'}}>
       <Navbar.Brand to="/">
         <img
-          src={require("../logo.png")}
-          className="mr-2 h-14 sm:h-20"
+          src={require("../assets/logo.png")}
+          className="mr-2 h-12 sm:h-20"
           alt="Swarajya Logo"
           style={{borderRadius:"60px"}}
         />
         </Navbar.Brand>
+        <div className="h1">
+        <div
+        onMouseEnter={() => setHover(false)}
+      onMouseLeave={() => setHover(true)}>
+        {hover ? (
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white" style={{paddingLeft:"1%",
+          
+          marginLeft:"7%",
+          width: "491px",
+          height: "62px",
+          fontWeight:"600",
+          fontSize:"32px"
+          }}>
+                    Swarajya
+          </span>
+        ) : (
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white" style={{paddingLeft:"1%",
+          
+          marginLeft:"7%",
+height: "62px",
+left: "504px",
+top: "35px",
+fontWeight:"600",
+fontSize:"38px",
+FontFace: "AMS Manthan"
+}}>
+
+स्वराज्य
+        </span>
+        )}
+      </div>
+
+        </div>
+        <div className="h2">
         <div
         onMouseEnter={() => setHover(false)}
       onMouseLeave={() => setHover(true)}>
@@ -39,6 +74,7 @@ FontFace: "AMS Manthan"
 स्वराज्य
         </span>
         )}
+      </div>
       </div>
 
         

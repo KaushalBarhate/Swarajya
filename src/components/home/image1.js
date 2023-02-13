@@ -3,21 +3,21 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 const spanStyle = {
-  padding: '20px',
+  padding: '40px',
   background: '#efefef',
   color: '#000000'
 }
 
-const divStyle = {
+
+const divStyle1 = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
-  height:'350px',
-  width:'500px'
+  height:'150px',
+  width:'200px'
  
 }
-
 const slideImages = [
     {
         url: 'https://www.majhimarathi.com/wp-content/uploads/2020/02/Sant-Tukaram-Maharaj.jpg',
@@ -53,21 +53,20 @@ const properties = {
     indicators: true,
     arrows: true
   };
-const Slideshow = () => {
+const Slideshow1 = () => {
     return (
-      <div className="slide-container" style={{height:'500px',width:'500px'}}>
-        <Slide {...properties}>
-         {slideImages.map((slideImage, index)=> (
-            <div key={index}>
-              <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                {/* <span style={spanStyle}></span> */}
+      <div className="slide-container" style={{height:'200px',width:'200px'}}>
+          <Slide {...properties}>
+           {slideImages.map((slideImage, index)=> (
+              <div key={index}>
+                <div style={{ ...divStyle1, 'backgroundImage': `url(${slideImage.url})` }}>
+                  {/* <span style={spanStyle}></span> */}
+                </div>
               </div>
-            </div>
-          ))} 
-        </Slide>
-        <span style={{paddingTop:'10px',fontWeight:'500'}}>Prominent Marathi Figures</span>
-      </div>
+            ))} 
+          </Slide>
+          <span style={{paddingTop:'10px',fontWeight:'500'}}>Prominent Marathi Figures</span>
+        </div>
     )
-}
-
-export default Slideshow
+  }
+  export default Slideshow1

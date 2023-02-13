@@ -1,0 +1,11 @@
+.sp1 {
+    font-size: 26px;
+    font-weight:600;
+}
+@media screen and (max-width: 620px) {
+    .sp1 {
+        font-size: 23px;
+        font-weight:600;
+    }
+    
+}

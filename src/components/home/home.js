@@ -3,6 +3,7 @@ import NavbarComponent from '../Navbar';
 import React,{ useState } from "react";
 import FooterComponent from '../Footer';
 import Content from '../content';
+import './home.css';
 function Home() {
     const [hover, setHover] = useState(true);
     return (
@@ -16,8 +17,8 @@ function Home() {
             <div style={{marginTop:"2%", paddingBottom:"3%"}} onMouseEnter={() => setHover(false)}
         onMouseLeave={() => setHover(true)}>
               {hover ?(
-              <span style={{fontWeight:"700",fontSize:"26px"}}>Swarajya Marathi Literary Association is a Cultural Club at Vellore Institute of Technology Chennai.</span>):
-              (<span style={{fontWeight:"700",fontSize:"26px"}}>स्वराज्य मराठी साहित्य संघ हा वेल्लूर इन्स्टिट्यूट ऑफ टेक्नॉलॉजी चेन्नई येथील सांस्कृतिक क्लब आहे.</span>)}
+              <span className="sp1" >Swarajya Marathi Literary Association is a Cultural Club at Vellore Institute of Technology Chennai.</span>):
+              (<span className="sp1" >स्वराज्य मराठी साहित्य संघ हा वेल्लूर इन्स्टिट्यूट ऑफ टेक्नॉलॉजी चेन्नई येथील सांस्कृतिक क्लब आहे.</span>)}
             </div>
           </div>
         </div>

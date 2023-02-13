@@ -2,7 +2,7 @@ import React from 'react'
 import './About.css'
 function About() {
   return (
-    <div className='About' style={{overflow:'hidden', backgroundColor:'orange' }}>
+    <div className='About' style={{overflow:'hidden', backgroundColor:'whitesmoke' }}>
         <div className='circleBackground'>
             <div style={{
             width: '150%',
