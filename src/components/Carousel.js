@@ -2,8 +2,6 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-import { useState, useEffect } from "react";
-import { useRef } from 'react';
 const spanStyle = {
   padding: "20px",
   background: "#efefef",
@@ -37,6 +35,15 @@ const slideImages = [
     caption: "Lata Mangeshkar",
   },
 ];
+const divStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundSize: "cover",
+
+  width: "100%",
+ 
+};
 const properties = {
   duration: 2000,
   transitionDuration: 500,
@@ -44,35 +51,7 @@ const properties = {
   indicators: true,
   arrows: true,
 };
-const Slideshow = () => {
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight
-  });
-  
-  const setDimension = () => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight
-    })
-  }
-  
-  useEffect(() => {
-    window.addEventListener('resize', setDimension);
-    
-    return(() => {
-        window.removeEventListener('resize', setDimension);
-    })
-  }, [screenSize])
-  const divStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundSize: "cover",
-  
-    width: screenSize.dynamicWidth > 506 ? screenSize.dynamicWidth < 1000? "400px":"506px" : "100%",
-    height: screenSize.dynamicWidth > 506 ? screenSize.dynamicWidth < 1000? "250px":"350px" : "120px", 
-  };
+const Slideshow = () => { 
   return (
     <div className="slide-container mx-auto w-1/2">
       <Slide {...properties}>
@@ -80,8 +59,12 @@ const Slideshow = () => {
           <div key={index}>
             <div
               className="mx-auto"
-              style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}
+              style={{ ...divStyle }}
             >
+              <img 
+              src={slideImage.url}
+              className="object-fill w-full h-auto"
+              />
               {/* <span style={spanStyle}></span> */}
             </div>
           </div>
