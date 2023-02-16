@@ -2,21 +2,15 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
+import { useState, useEffect } from "react";
+import { useRef } from 'react';
 const spanStyle = {
   padding: "20px",
   background: "#efefef",
   color: "#000000",
 };
 
-const divStyle = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundSize: "cover",
 
-  height: "350px",
-  width: "500px",
-};
 const slideImages = [
   {
     url: "https://www.majhimarathi.com/wp-content/uploads/2020/02/Sant-Tukaram-Maharaj.jpg",
@@ -51,6 +45,34 @@ const properties = {
   arrows: true,
 };
 const Slideshow = () => {
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight
+  });
+  
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight
+    })
+  }
+  
+  useEffect(() => {
+    window.addEventListener('resize', setDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', setDimension);
+    })
+  }, [screenSize])
+  const divStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundSize: "cover",
+  
+    width: screenSize.dynamicWidth > 506 ? screenSize.dynamicWidth < 1000? "400px":"506px" : "100%",
+    height: screenSize.dynamicWidth > 506 ? screenSize.dynamicWidth < 1000? "250px":"350px" : "120px", 
+  };
   return (
     <div className="slide-container mx-auto w-1/2">
       <Slide {...properties}>
