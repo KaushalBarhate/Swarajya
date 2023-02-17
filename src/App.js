@@ -14,6 +14,7 @@ import UpcomingEvents from "./components/Events";
 
 function App() {
   const [hover, setHover] = useState(true);
+  console.log(process.env.REACT_APP_DATASET);
   return (
     <div
       className="App flex flex-col min-h-screen"
