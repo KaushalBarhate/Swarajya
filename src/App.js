@@ -7,6 +7,7 @@ import FooterComponent from "./components/Footer";
 // import Content from "./components/content";
 // import Home from "./components/home/home";
 import Home from "./components/Home";
+import About from "./components/About";
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blog";
 import Gallery2 from "./components/Gallery";
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
+          <Route exact path="aboutus" element={<About />} />
           <Route exact path="blogs" element={<Blogs />} />
           <Route exact path="gallery" element={<Gallery2 />} />
           <Route exact path="events" element={<UpcomingEvents />} />
