@@ -2,27 +2,27 @@ import React from "react";
 import { Carousel } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Slideshow from "./Carousel";
-import { useRef } from 'react';
+import { useRef } from "react";
 function Home() {
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight
+    dynamicHeight: window.innerHeight,
   });
   const [hover, setHover] = useState(true);
   const setDimension = () => {
     getDimension({
       dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight
-    })
-  }
-  
+      dynamicHeight: window.innerHeight,
+    });
+  };
+
   useEffect(() => {
-    window.addEventListener('resize', setDimension);
-    
-    return(() => {
-        window.removeEventListener('resize', setDimension);
-    })
-  }, [screenSize])
+    window.addEventListener("resize", setDimension);
+
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, [screenSize]);
   return (
     <div>
       <div>
@@ -38,10 +38,10 @@ function Home() {
             boxShadow:
               "4px 4px 25px 3px #F4EB0C, -4px -4px 25px 5px rgba(244, 235, 12, 0.53)",
             borderRadius: "354px",
-            width: screenSize.dynamicWidth > 600 ? "506px" : "60%", 
-            height: screenSize.dynamicWidth > 600 ? "506px" : "60%", 
+            width: screenSize.dynamicWidth > 600 ? "506px" : "60%",
+            height: screenSize.dynamicWidth > 600 ? "506px" : "60%",
           }}
-          src={require("../home.jpg")}
+          src={"./assets/home.jpg"}
           alt="Logo"
           className="w-20 h-20 mx-auto my-12"
         />
