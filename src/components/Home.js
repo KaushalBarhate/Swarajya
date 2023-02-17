@@ -2,7 +2,6 @@ import React from "react";
 import { Carousel } from "flowbite-react";
 import { useState, useEffect } from "react";
 import Slideshow from "./Carousel";
-import { useState, useEffect } from "react";
 import { useRef } from 'react';
 function Home() {
   const [screenSize, getDimension] = useState({
