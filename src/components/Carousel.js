@@ -53,7 +53,7 @@ const properties = {
 };
 const Slideshow = () => { 
   return (
-    <div className="slide-container mx-auto w-1/2">
+    <div className="slide-container mx-auto w-3/4 md:mx-auto w-1/2 ">
       <Slide {...properties}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
