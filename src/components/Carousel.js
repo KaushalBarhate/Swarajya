@@ -23,7 +23,7 @@ const slideImages = [
     caption: "Babasaheb Ambedkar",
   },
   {
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDLMtYb8jGiM-y0ayCSUEB4JWWd8gpeb17FoiseryMrE3n0KooPI6AOU80Vs4vJjTdFc&usqp=CAU",
+    url: "https://www.newsbharati.com/Encyc/2022/7/23/main-qimg-809eac6c02e946732ccef3682a7bce08-lq_202207231219459476_H@@IGHT_335_W@@IDTH_602.jpeg",
     caption: "Lokmanya Tilak",
   },
   {
