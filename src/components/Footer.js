@@ -34,6 +34,12 @@ export default function FooterComponent() {
             <Footer.Link href={"https://instagram.com/swarajya_vitc?igshid=MmJiY2I4NDBkZg=="} target="_blank" rel="noopener noreferrer">
               <FaInstagram className="text-white" size={20} />
             </Footer.Link>
+            <Footer.Link href={"https://twitter.com/swarajya_vitc"} target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-white" size={20} />
+            </Footer.Link>
+            <Footer.Link href={"https://www.facebook.com/profile.php?id=100092189738798"} target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="text-white" size={20} />
+            </Footer.Link>
           </Footer.LinkGroup>
         </div>
       </div>
