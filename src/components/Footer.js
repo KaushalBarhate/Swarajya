@@ -1,9 +1,9 @@
 import React from "react";
 import { Footer } from "flowbite-react";
 import {
-  // FaFacebook,
-  // FaTwitter,
-  FaYoutube,
+  FaFacebook,
+  FaTwitter,
+  // FaYoutube,
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa";
