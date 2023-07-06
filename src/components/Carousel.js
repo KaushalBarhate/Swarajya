@@ -46,7 +46,7 @@ const divStyle = {
 };
 
 const imgStyle = {
-  maxHeight: '411px',
+  maxHeight: "411px",
 };
 
 const properties = {
