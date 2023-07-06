@@ -42,8 +42,13 @@ const divStyle = {
   backgroundSize: "cover",
 
   width: "100%",
- 
+  minHeight: "520px",
 };
+
+const imgStyle = {
+  maxHeight: '411px',
+};
+
 const properties = {
   duration: 2000,
   transitionDuration: 500,
@@ -64,6 +69,7 @@ const Slideshow = () => {
               <img 
               src={slideImage.url}
               className="object-fill w-full h-auto"
+              style={{ ...imgStyle }}
               />
               {/* <span style={spanStyle}></span> */}
             </div>
